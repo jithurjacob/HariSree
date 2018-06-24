@@ -1,0 +1,23 @@
+{
+  "name": "harisree",
+  "version": "4.0.0",
+  "description": "Indian Language typing made easy and cool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "package": "electron-packager . HariSree -platform=win32 -arch=x64 -version=4.0.0 -icon=/resources/icon/logo.ico"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jithurjacob/HariSree.git"
+  },
+  "author": "Jithu R Jacob",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jithurjacob/HariSree/issues"
+  },
+  "homepage": "https://github.com/jithurjacob/HariSree#readme",
+  "devDependencies": {
+    "electron": "^2.0.3"
+  }
+}
