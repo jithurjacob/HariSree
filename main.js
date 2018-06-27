@@ -1,35 +1,46 @@
-const {app, BrowserWindow, ipcRenderer} = require('electron')
+const { app, BrowserWindow, ipcRenderer } = require('electron')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
 const url = require("url")
 const path = require("path")
-function createWindow () {
+function createWindow() {
   // Create the browser window.
+  var width = 986
+  var height = 570
   win = new BrowserWindow({
-      width: 800, 
-      height: 600,
-      title: "HariSree",
-      icon:"./resources/icon/logo.ico",
-      darkTheme: true,
-      titleBarStyle: "hidden",
-      autoHideMenuBar: true,
-      webPreferences:{
-        devTools: true
-        // allowRunningInsecureContent: true,
-        // webSecurity: false
-      }})
+    width: width,
+    maxWidth:width,
+    minWidth:width,
+    height: height,
+    maxHeight:height,
+    minHeight:height,
+
+    center:true,
+    fullscreenable:false,
+    maximizable:false,
+    title: "HariSree",
+    icon: "./resources/icon/logo.ico",
+    darkTheme: true,
+    titleBarStyle: "hidden",
+    autoHideMenuBar: true,
+    webPreferences: {
+      devTools: true
+      // allowRunningInsecureContent: true,
+      // webSecurity: false
+    }
+  })
 
   // and load the index.html of the app.
-//   win.loadFile("index.html")
+  //   win.loadFile("index.html")
   win.loadURL(url.format({
-    pathname:path.join(__dirname,'/resources/html/2.html'),
-    protocol:'file:'
-    }));
+    pathname: path.join(__dirname, '/resources/html/about.html'),
+    protocol: 'file:'
+  }));
 
 
   // Open the DevTools.
-//   win.webContents.openDevTools()
+    win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -39,15 +50,13 @@ function createWindow () {
     win = null
   })
   const ipc = require('electron').ipcMain
-    ipc.on('doorBell', function(event, arg){
-    console.log("here")
-    console.log(event)
-    console.log(arg)
+  ipc.on('change-page', function (event, arg) {
+    console.log("here",arg)
     win.loadURL(url.format({
-        pathname:path.join(__dirname,'/resources/html/3.html'),
-        protocol:'file:'
-        }));
-});
+      pathname: path.join(__dirname, '/resources/html/'+arg+'.html'),
+      protocol: 'file:'
+    }));
+  });
 }
 
 

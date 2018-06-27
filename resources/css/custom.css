@@ -1,0 +1,27 @@
+﻿html, body {
+    height: 100%;
+    width: 100%;
+}
+#left_panel {
+    width: 169px;
+    height: 100%;
+    background: rgba(222, 222, 222, 1);
+    display: inline-block;
+}
+#right_panel{
+    height: 100%;
+    display: inline-block;
+    width: calc(100% - 175px);
+}
+
+.left_menu_item{
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.left_menu_item:hover{
+    background-color: lightgray;
+}
+.active_left_menu_item{
+    background-color: #28a745!important;
+    color: white;
+}
