@@ -12,6 +12,7 @@
     height: 100%;
     display: inline-block;
     width: calc(100% - 175px);
+    overflow-y: auto;
 }
 
 .left_menu_item{

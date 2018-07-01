@@ -1,16 +1,17 @@
-﻿console.log("in KEboard js")
+﻿
+$("#select_keyboard_layout").append("<option value='malayalam'>Malayalam</option>\
+<option value='hindi'>Hindi</option>");
 
-const vowels = ["്", "ാ", "ി", "ീ", "ു", "ൂ", "െ", "േ", "ൈ", "ൗ"]
+$("#select_keyboard_layout").on('click',function(){
+    setKeyboardLanguage($(this).val());
+});
 
-const consonants = [ ["ക","ഖ","ഗ","ഘ","ങ"],
-                     ["ച","ഛ","ജ","ഝ","ഞ"],
-                     ["ട","ഠ","ഡ","ഢ","ണ"],
-                     ["ത","ഥ","ദ","ധ","ന"],
-                     ["പ","ഫ","ബ","ഭ","മ"],
-                     ["യ","ര","ല","വ","ശ","ഷ","സ","ഹ","ള","ഴ","റ"]]
+setKeyboardLanguage('malayalam');
 
-
-
+function setKeyboardLanguage(lang){
+    if(lang === 'malayalam')
+        setMalayalamLayout();
+}
 
 
 
