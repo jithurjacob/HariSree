@@ -25,3 +25,15 @@
     background-color: #28a745!important;
     color: white;
 }
+
+/* keyboard layout */
+.key_btn{
+    width: 50px;
+    height: 40px;
+    padding: 5px;
+    margin: 2px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}

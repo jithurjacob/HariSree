@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Help</title>
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
   <link rel="stylesheet" href="../css/custom.css">
 
 
@@ -18,13 +19,101 @@
         <h2 class="text-center font-weight-light text-success">HariSree</h2>
       </div>
       <div class="p-2 left_menu_item " menu-name="about">About</div>
-      <div class="p-2 left_menu_item" menu-name="keyboard">Keyboard</div>
+      <div class="p-2 left_menu_item active_left_menu_item" menu-name="keyboard">Keyboard</div>
       <div class="p-2 left_menu_item" menu-name="settings">Settings</div>
-      <div class="p-2 left_menu_item active_left_menu_item" menu-name="help">Help</div>
+      <div class="p-2 left_menu_item " menu-name="help">Help</div>
       <!-- </div> -->
     </div>
     <div class="d-flex" id="right_panel">
-      Form Goes Here
+
+
+      <div class=" flex-fill">
+        <div class="d-flex flex-fill_ align-items-right">
+          <select class="custom-select my-1 mr-sm-2 p-2 m-2  w-25" id="select_keyboard_layout">
+            <option value="malayalam">Malayalam</option>
+          </select>
+        </div>
+        <div class="d-flex flex-fill">
+          <textarea class="p-2 m-2 flex-fill" rows="3" id="text_editor"></textarea>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-center keyboard_row_1">
+          <div class="key_btn keyboard_cell_1_1"></div>
+          <div class="key_btn keyboard_cell_1_2"></div>
+          <div class="key_btn keyboard_cell_1_3"></div>
+          <div class="key_btn keyboard_cell_1_4"></div>
+          <div class="key_btn keyboard_cell_1_5"></div>
+          <div class="key_btn keyboard_cell_1_6"></div>
+          <div class="key_btn keyboard_cell_1_7"></div>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-center keyboard_row_2">
+          <div class="key_btn keyboard_cell_2_1"></div>
+          <div class="key_btn keyboard_cell_2_2"></div>
+          <div class="key_btn keyboard_cell_2_3"></div>
+          <div class="key_btn keyboard_cell_2_4"></div>
+          <div class="key_btn keyboard_cell_2_5"></div>
+          <div class="key_btn keyboard_cell_2_6"></div>
+          <div class="key_btn keyboard_cell_2_7"></div>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-center keyboard_row_3">
+          <div class="key_btn keyboard_cell_3_1"></div>
+          <div class="key_btn keyboard_cell_3_2"></div>
+          <div class="key_btn keyboard_cell_3_3"></div>
+          <div class="key_btn keyboard_cell_3_4"></div>
+          <div class="key_btn keyboard_cell_3_5"></div>
+          <div class="key_btn keyboard_cell_3_6"></div>
+          <div class="key_btn keyboard_cell_3_7"></div>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-center keyboard_row_4">
+          <div class="key_btn keyboard_cell_4_1"></div>
+          <div class="key_btn keyboard_cell_4_2"></div>
+          <div class="key_btn keyboard_cell_4_3"></div>
+          <div class="key_btn keyboard_cell_4_4"></div>
+          <div class="key_btn keyboard_cell_4_5"></div>
+          <div class="key_btn keyboard_cell_4_6"></div>
+          <div class="key_btn keyboard_cell_4_7"></div>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-center keyboard_row_5">
+          <div class="key_btn keyboard_cell_5_1"></div>
+          <div class="key_btn keyboard_cell_5_2"></div>
+          <div class="key_btn keyboard_cell_5_3"></div>
+          <div class="key_btn keyboard_cell_5_4"></div>
+          <div class="key_btn keyboard_cell_5_5"></div>
+          <div class="key_btn keyboard_cell_5_6"></div>
+          <div class="key_btn keyboard_cell_5_7"></div>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-center keyboard_row_6">
+          <div class="key_btn keyboard_cell_6_1"></div>
+          <div class="key_btn keyboard_cell_6_2"></div>
+          <div class="key_btn keyboard_cell_6_3"></div>
+          <div class="key_btn keyboard_cell_6_4"></div>
+          <div class="key_btn keyboard_cell_6_5"></div>
+          <div class="key_btn keyboard_cell_6_6"></div>
+          <div class="key_btn keyboard_cell_6_7"></div>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-center keyboard_row_7">
+          <div class="key_btn keyboard_cell_7_1"></div>
+          <div class="key_btn keyboard_cell_7_2"></div>
+          <div class="key_btn keyboard_cell_7_3"></div>
+          <div class="key_btn keyboard_cell_7_4"></div>
+          <div class="key_btn keyboard_cell_7_5"></div>
+          <div class="key_btn keyboard_cell_7_6"></div>
+          <div class="key_btn keyboard_cell_7_7"></div>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-center keyboard_row_8">
+          <div class="key_btn keyboard_cell_8_1"></div>
+          <div class="key_btn keyboard_cell_8_2"></div>
+          <div class="key_btn keyboard_cell_8_3"></div>
+          <div class="key_btn keyboard_cell_8_4"></div>
+          <div class="key_btn keyboard_cell_8_5"></div>
+          <div class="key_btn keyboard_cell_8_6"></div>
+          <div class="key_btn keyboard_cell_8_7"></div>
+        </div>
+      </div>
+
+
+
+
+
     </div>
   </div>
 
@@ -32,8 +121,13 @@
 <script src="../../node_modules/jquery/dist/jquery.js"></script>
 <script src="../../node_modules/popper.js/dist/umd/popper.js"></script>
 <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
 <script>
   window.jQuery = window.$ = require('jquery');
+</script>
+<script>
+
 </script>
 <script src="../js/KeyBoard.js"></script>
 <script src="../js/navigation.js"></script>
