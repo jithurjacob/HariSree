@@ -13,6 +13,11 @@ function setKeyboardLanguage(lang){
         setMalayalamLayout();
 }
 
+$(".key_btn").on('click',function(){
+    // show an svg on top of this btn
+    
+});
+
 
 
                      
