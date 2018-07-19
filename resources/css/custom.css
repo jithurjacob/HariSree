@@ -2,6 +2,9 @@
     height: 100%;
     width: 100%;
 }
+svg{
+    text-align: center;
+}
 #left_panel {
     width: 169px;
     height: 100%;
