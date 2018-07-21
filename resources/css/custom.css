@@ -41,3 +41,19 @@ svg{
     text-align: center;
     vertical-align: middle;
 }
+
+.slice,.key_btn{
+    cursor: pointer;
+}
+.slice text{
+    cursor: pointer;
+}
+
+.slice{
+
+}
+
+.slice path:hover{
+    fill:white;
+    color: black
+}

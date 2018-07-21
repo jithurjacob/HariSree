@@ -4,21 +4,23 @@ const { app, BrowserWindow, ipcRenderer } = require('electron')
 let win
 const url = require("url")
 const path = require("path")
+const DEV = false
+
 function createWindow() {
   // Create the browser window.
   var width = 986
   var height = 570
   win = new BrowserWindow({
     width: width,
-    maxWidth:width,
+    maxWidth:DEV ==true? null:width,
     minWidth:width,
     height: height,
-    maxHeight:height,
+    maxHeight: DEV ==true? null:height,
     minHeight:height,
 
     center:true,
-    fullscreenable:false,
-    maximizable:false,
+    fullscreenable:DEV ==true? true:false,
+    maximizable:DEV ==true? true:false,
     title: "HariSree",
     icon: "./resources/icon/logo.ico",
     darkTheme: true,
