@@ -4,7 +4,7 @@
   "description": "Indian Language typing made easy and cool",
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js",
+    "start": "electron .",
     "package": "electron-packager . HariSree -platform=win32 -arch=x64 -version=4.0.0 -icon=/resources/icon/logo.ico"
   },
   "repository": {

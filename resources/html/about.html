@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>HomePage</title>
+  <title>HariSree</title>
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/custom.css">
 
@@ -24,13 +24,29 @@
       <!-- </div> -->
     </div>
     <div class="d-flex" id="right_panel">
-      <div class="d-flex flex-row_ h-100">
-        <div class="d-flex align-self-center flex-column">
-          <h1 class="text-center font-weight-light text-success">HariSree Software Solutions</h1>
-          <h1 class="text-center font-weight-light text-success">HariSree Software Solutions</h1>
+      <div class="flex-fill p-4 m-4">
+        <div class="d-flex flex-row align-items-center justify-content-center">
           <h1 class="text-center font-weight-light text-success">HariSree Software Solutions</h1>
         </div>
+        <div class="d-flex flex-row align-items-center justify-content-center">
+          <div class="bg-success">
+            <img src="../img/logo_image.png">
+          </div>
+        </div>
+        <div class="d-flex flex-row align-items-left justify-content-left mt-2 " style="position:absolute;bottom:70px">
+          <h6 class="text-center font-weight-light text-dark">Report Issues: <a class="open-in-browser"  href="https://github.com/jithurjacob/HariSree/issues">https://github.com/jithurjacob/HariSree/issues</a></h6>
+        </div>
+        <div class="d-flex flex-row align-items-left justify-content-left mt-2 " style="position:absolute;bottom:50px">
+          <h6 class="text-center font-weight-light text-dark">Support Development of HariSree: <a class="open-in-browser" href="https://github.com/jithurjacob/HariSree">https://github.com/jithurjacob/HariSree</a></h6>
+        </div>
+        <div class="d-flex flex-row align-items-left justify-content-left " style="position:absolute;bottom:30px">
+          <h6 class="text-center font-weight-light text-dark" id="version">Version 4.1</h6>
+        </div>
+        <div class="d-flex flex-row align-items-left justify-content-left " style="position:absolute;bottom:10px">
+          <h6 class="text-center font-weight-light text-dark" id="copyright"></h6>
+        </div>
       </div>
+      
     </div>
   </div>
 
@@ -41,6 +57,14 @@
 <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script>
   window.jQuery = window.$ = require('jquery');
+  $("#copyright").text("© HariSree Software Solutions 2010-"+(new Date()).getFullYear());
+  $("#version").text("Version "+require('electron').remote.app.getVersion());
+
+  const shell = require('electron').shell;
+  $('.open-in-browser').click((event) => {
+          event.preventDefault();
+          shell.openExternal(event.target.href);
+  });
 </script>
 <!-- <script src="../js/KeyBoard.js"></script> -->
 <script src="../js/navigation.js"></script>

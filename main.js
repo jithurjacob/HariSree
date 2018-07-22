@@ -4,7 +4,7 @@ const { app, BrowserWindow, ipcRenderer } = require('electron')
 let win
 const url = require("url")
 const path = require("path")
-const DEV = false
+const DEV = true
 
 function createWindow() {
   // Create the browser window.
@@ -27,7 +27,7 @@ function createWindow() {
     titleBarStyle: "hidden",
     autoHideMenuBar: true,
     webPreferences: {
-      devTools: true
+      devTools: DEV ==true? true:false
       // allowRunningInsecureContent: true,
       // webSecurity: false
     }
@@ -42,6 +42,7 @@ function createWindow() {
 
 
   // Open the DevTools.
+  if(DEV)
     win.webContents.openDevTools()
 
   // Emitted when the window is closed.
@@ -53,7 +54,7 @@ function createWindow() {
   })
   const ipc = require('electron').ipcMain
   ipc.on('change-page', function (event, arg) {
-    console.log("here",arg)
+    // console.log("here",arg)
     win.loadURL(url.format({
       pathname: path.join(__dirname, '/resources/html/'+arg+'.html'),
       protocol: 'file:'

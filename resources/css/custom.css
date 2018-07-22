@@ -57,3 +57,8 @@ svg{
     fill:white;
     color: black
 }
+
+.abs_bottom{
+bottom: 0px;
+position: absolute
+}
