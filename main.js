@@ -4,7 +4,7 @@ const { app, BrowserWindow, ipcRenderer } = require('electron')
 let win
 const url = require("url")
 const path = require("path")
-const DEV = true
+const DEV = false
 
 function createWindow() {
   // Create the browser window.
